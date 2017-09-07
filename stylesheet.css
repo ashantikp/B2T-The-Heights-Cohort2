@@ -7,40 +7,19 @@ header {
 	text-align: left;
 	background-size: cover;
 }
-
-/* Header tagline */
-
-.header {
-	display: block;
-	height: 300px;
+section{
+	/*display: inline-table;
+	width: 30%;
+	height: 300px;*/
 	padding-left: 10px;
 	padding-right: 10px;
 }
-.header h2{
-	text-align: center;
-}
-.header p{
-	text-align: justify;
-	font-size: 15px;
-	display: inline-block;
-	line-height: 30px;
-}
-section {
-	padding-left: 10px;
-	padding-right: 10px;
-}
-
-/* webpage link stlye */
-
 a {
 	text-decoration: none;
 }
 a:visited{
 	color: #212223; 
 }
-
-/* navigation menu */
-
 nav ul {
 	list-style-type: none;
     width: 60px;
@@ -57,7 +36,15 @@ nav li a{
 	text-align: right;
 	background-color: rgba(93,175,120,0.5);
 }
-
+/* nav animation */
+nav li a:hover{
+	margin-left: -24px;
+	margin-right: 24px;
+}
+nav li a:hover{
+	background-color: rgb(33,34,35);
+	color: white;
+}
 nav ul{
 	position: fixed;
 	top: 0px;
@@ -67,20 +54,6 @@ nav img{
 	height: 300px; 
 	max-width: 100%
 }
-
-/* nav animation */
-
-nav li a:hover{
-	margin-left: -24px;
-	margin-right: 24px;
-}
-nav li a:hover{
-	background-color: rgb(33,34,35);
-	color: white;
-}
-
-/* nav menu dropdown */
-
 .dropbtn{
 
 
@@ -98,9 +71,7 @@ nav li a:hover{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;*/
 }
-
 /* color of menu shown */
-
 .dropdown-content a{
 	background-color: rgb(33,34,35);
 	color: white;
@@ -109,17 +80,13 @@ nav li a:hover{
 	margin-left: -24px;
 	margin-right: 24px;
 }
-
 /* Show the dropdown menu on hover */
-
 .dropdown:hover .dropdown-content {
     display: block;
     margin-left: -24px;
 	margin-right: 24px;
 }
-
 /* Change the background color of the dropdown button when the dropdown content is shown */
-
 .dropdown:hover{
 	background-color: rgba(93,175,120,0.5);
 	color: #212223;
@@ -152,22 +119,20 @@ img {
 	width: 30%;
 	height: 300px;
 }
-
 /* contact form */
-
-form input{
+input{
 	display: block;
 }
-form input[type=text] {
+input[type=text] {
 	width: 50%;
 }
-form input[name=MESSAGE] {
+input[name=MESSAGE] {
 	height: 150px;
 }
-form input[type=email] {
+input[type=email] {
 	width: 50%;
 }
-form input[type=submit] {
+input[type=submit] {
 	background-color: white;
 	border-top-style: none;
 	border-left-style: none;
@@ -179,14 +144,12 @@ form input[type=submit] {
 	font-family: verdana;
 	font-size: 15px;
 }
-form input[type=submit]:hover {
+input[type=submit]:hover {
 	border-style: none;
 	background-color: rgb(33,34,35);
 	color: white;
+	
 }
-
-/* footer */
-
 footer{
 	right: 0;
   	bottom: 0;
