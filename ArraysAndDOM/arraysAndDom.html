@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<p id="fruit"></p>
+
+		<script type="text/javascript">
+			// create "fruits array"
+			// push element using prompt
+			// add element to the end of the array
+			// sort the array
+			// access DOM and display elements
+			// seperate elements by "with"
+
+			var fruits = ["apple", "orange", "kiwi"];
+
+			fruits.push(prompt("Add more fruit"));
+			fruits.sort();
+			document.getElementById("fruit").innerHTML = fruits.join( " with ");
+		</script>
+	</body>
+</html>
