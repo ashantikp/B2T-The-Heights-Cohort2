@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<h1 id=piglatin></h1>
+
+		<script type="text/javascript">
+			//Displays word from pos. 1 to the last char, concat first char of word with "ay"
+			var word = prompt();
+			var piglatin = word.slice(1,word.length) + word.charAt(0) + 'ay';
+
+			document.getElementById('piglatin').innerHTML = piglatin;
+
+		</script>
+	</body>
+</html>
