@@ -4,7 +4,7 @@
 		<title>Projects - AKP </title>
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 		<style type="text/css">
-			div{
+			.projects{
 				height: 80px;
 				display: block;
 				font-size: 14px;
@@ -12,26 +12,30 @@
 				color: white;
 				width: 50%;
 			}
-			div:hover{
+			.projects:hover{
 				background-color: #FFFFFF;
 				color: #212223;
 			}
 		</style>
 	</head>
 	<body>
-		<nav>
+		<!-- Logo header w/ hyperlink to homepage -->
+		<header>
 			<a href="index.html"><img src="images/akplogo.svg"></a>
+		</header>
+
+		<!-- Navigation menu -->
+		<nav>
 			<ul>
 				<li><a href="index.html">about me</a></li>
-					<li><a href="projects.html">projects</a></li>
-					<div class="dropdown">
-						<div class="dropdown-content">
-							<ul>
-								<li><a href="">websites</a></li>
-								<li><a href="">logos/brand identities</a></li>
-								<li><a href="">other media</a></li>
-							</ul>
-						</div>
+				<!-- <div class="dropdown"> -->
+				<li class="dropdown"><a href="projects.html">projects</a></li>
+					<div class="dropdown-content">
+						<ul>
+							<li><a href="">websites</a></li>
+							<li><a href="">logos/brand identities</a></li>
+							<li><a href="">other media</a></li>
+						</ul>
 					</div>
 				<li><a href="contact.html">contact</a></li>
 			</ul>
@@ -41,29 +45,10 @@
 		<img src="https://previews.123rf.com/images/sector2012/sector20121501/sector2012150100003/35895575-Mockup-business-template-High-resolution--Stock-Photo-mock.jpg" style="background-size: cover; max-width: 75%">
 
 		<br><br><br><br><br><br>
-		
-		<section>
-			<h1>Projects</h1>
-			<br/>
-
-			<div>
-				<h2>Websites</h2>
-			</div>
-
-			<div>
-				<h2>Logos/Brand Identity</h2>
-			</div>
-
-			<div>
-				<h2>Other Media</h2> 
-			</div>
-		</section>
-
-		<br/><br/><br/><br/><br/><br/><br/><br/>
 
 		<section>
 			<h1>CV/Resume</h1>
-			<h2>Technical Skills</h2>
+			<!-- <h2>Technical Skills</h2>
 			<ul style="line-height: 30px;">
 				<li>HTML/CSS</li>
 				<li>Wordpress</li>
@@ -78,10 +63,30 @@
 			<h2>Certifications</h2>
 			<p>
 				<strong>Adobe Certified Associate,</strong><em> Visual Communications in Photoshop, Illustrator, and InDesign </em>
-			</p>
+			</p> -->
+			
+			<iframe style="border: 1px solid #777;" src="https://indd.adobe.com/embed/33f45570-987a-4453-bdae-b998a6bdb25b?startpage=1&allowFullscreen=true" width="650px" height="460px" frameborder="0" allowfullscreen=""></iframe>
 		</section>
 
-		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+		<section>
+			<h1>Projects</h1>
+			<br/>
+
+			<div>
+				<h2 class="projects">Websites</h2>
+			</div>
+
+			<div>
+				<h2 class="projects">Logos/Brand Identity</h2>
+			</div>
+
+			<div>
+				<h2 class="projects">Other Media</h2> 
+			</div>
+		</section>
+
+		<br/><br/><br/><br/>
+
 
 		<footer>
 			<hr>

@@ -25,6 +25,7 @@ header {
 	display: inline-block;
 	line-height: 30px;
 }
+
 section {
 	padding-left: 10px;
 	padding-right: 10px;
@@ -35,6 +36,7 @@ section {
 a {
 	text-decoration: none;
 }
+
 a:visited{
 	color: #212223; 
 }
@@ -71,31 +73,28 @@ nav img{
 /* nav animation */
 
 nav li a:hover{
+	background-color: rgb(33,34,35);
+	color: white;
 	margin-left: -24px;
 	margin-right: 24px;
 }
-nav li a:hover{
+nav li a:active{
 	background-color: rgb(33,34,35);
 	color: white;
 }
 
 /* nav menu dropdown */
 
-.dropbtn{
-
-
-}
 .dropdown {
     position: relative;
-    display: inline-block;
+    /*display: inline-block;*/
 }
 /* nav dropdown - hidden default */
 .dropdown-content{
 	display: none;
     position: absolute;
-    /*background-color: rgba(93,175,120,0.5);
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;*/
 }
 
@@ -107,22 +106,25 @@ nav li a:hover{
 	text-decoration: none;
 	display: block;
 	margin-left: -24px;
-	margin-right: 24px;
+	margin-right: 24px; 
 }
 
 /* Show the dropdown menu on hover */
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover{
     display: block;
-    margin-left: -24px;
-	margin-right: 24px;
+    /* margin-left: -24px;
+	margin-right: 24px; */
 }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 
-.dropdown:hover{
+.dropdown-content a:hover{
 	background-color: rgba(93,175,120,0.5);
 	color: #212223;
+	display: inline-block;
+    margin-left: -24px;
+	margin-right: 24px;
 }
 @media screen and (max-width: 480px){
 	section{
