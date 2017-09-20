@@ -7,18 +7,22 @@
 
 		<script type="text/javascript">
 			//create array for grades 
-			//use if statement to log a comparison
+			var grade = [80, 77, 88, 95, 68];
 
-			var grade = [80, 77, 88, 95, 68]
+			//find average
+			var sum = 80 + 77 + 88 + 95 + 68;
+			var avg = sum / grade.length;
 
-			//determine letter grade
-			if(grade >= 90 && <=100){
+			console.log(avg);
+
+			//determine letter grade of average using if statement
+			if(avg >= 90 && avg <=100){
 				console.log('A')
-			}else if(grade >= 80 && grade <= 89){
+			}else if(avg >= 80 && avg <= 89){
 				console.log('B')
-			}else if(grade >=71 && grade <=79){
+			}else if(avg >=71 && avg <=79){
 				console.log('C')
-			}else if(grade >=61 && grade <=70){
+			}else if(avg >=61 && avg <=70){
 				console.log('D')
 			}else{
 				console.log('F')
