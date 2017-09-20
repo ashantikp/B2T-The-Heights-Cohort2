@@ -7,8 +7,9 @@
 		<h1 id="day"></h1>
 
 		<script type="text/javascript">
-			//looking for specific value, the current day. use 
-			//use switch statement to display value to in the DOM
+			//Get today's day. Use new Date().getDay 
+			//use switch statement to assign values to cases 0-6
+			//using innerHTML through the DOM, display a message for the current day
 			switch(new Date().getDay()){
 				case 0: 
 					document.getElementById('day').innerHTML ='Happy Sunday!';
