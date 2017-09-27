@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<!--  
+		Use onclick event listener to diplay form values
+		Display name in <p> tag 
+		-->
+		<p id="display"></p>
+
+		<form>
+			<input type="text" id="fname" value="Curtis"><br>
+			<input type="text" id="lname" value="Jackson"><br>
+			<input type="button" value="Submit" onclick="getFormValue()">
+		</form>
+		
+		<script type="text/javascript">
+			
+			// Create a function that will display the form value on click
+			// Get values from form inputs 
+			function getFormValue(){
+				document.getElementById("display").innerHTML = ("Hello " + document.getElementById("fname").value + document.getElementById("lname").value) 
+			}
+		</script>
+	</body>
+</html>
