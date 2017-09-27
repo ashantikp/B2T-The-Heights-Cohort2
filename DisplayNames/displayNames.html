@@ -11,17 +11,18 @@
 		<p id="display"></p>
 
 		<form>
-			<input type="text" id="fname" value="Curtis"><br>
-			<input type="text" id="lname" value="Jackson"><br>
+			First name: <input type="text" id="fname" value="Curtis"><br>
+			Last name: <input type="text" id="lname" value="Jackson"><br>
 			<input type="button" value="Submit" onclick="getFormValue()">
 		</form>
 		
 		<script type="text/javascript">
-			
-			// Create a function that will display the form value on click
 			// Get values from form inputs 
+			var fname = document.getElementById("fname").value;
+			var lname = document.getElementById("lname").value;
+			// Create a function that will display the form value on click 
 			function getFormValue(){
-				document.getElementById("display").innerHTML = ("Hello " + document.getElementById("fname").value + document.getElementById("lname").value) 
+				document.getElementById("display").innerHTML = ("Hello " + fname + " " + lname) 
 			}
 		</script>
 	</body>
