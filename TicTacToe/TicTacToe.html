@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style type="text/css">
+			table{
+				border: none;
+			}
+
+			th{
+				height: 200px;
+				width: 200px;
+				font-size: 100px;
+				font-family: helvetica;
+				border: 2px solid black;
+				background-color: black;
+				color: white;
+
+
+			}
+		</style>
+	</head>
+	<body>
+		<!-- make 3x3 table -->
+		<table border="2">
+			<tr>
+				<th id="sq0" onclick="clickSquare(this)"></th>
+				<th id="sq1" onclick="clickSquare(this)"></th>
+				<th id="sq2" onclick="clickSquare(this)"></th>
+			</tr>
+			<tr>
+				<th id="sq3" onclick="clickSquare(this)"></th>
+				<th id="sq4" onclick="clickSquare(this)"></th>
+				<th id="sq5" onclick="clickSquare(this)"></th>
+			</tr>
+			<tr>
+				<th id="sq6" onclick="clickSquare(this)"></th>
+				<th id="sq7" onclick="clickSquare(this)"></th>
+				<th id="sq8" onclick="clickSquare(this)"></th>
+			</tr>
+		</table>
+
+	<script type="text/javascript">
+		// To-do: make 3x3 grid
+		// onclick square, display symbol
+			//disable clicked sqaure on grid
+		// switch symbol/player turn
+		// make check WIN (hor, ver, diag)
+		// check DRAW (all grids fill w/ no win)
+		// repeat steps 2-5
+		var board = [
+		'','','',
+		'','','',
+		'','','',]
+
+		//player 'X' goes first
+		var player = 'X';
+
+		function clickSquare(square){
+			//ensure only empty squares run code
+			if(square.innerHTML == ''){
+				//onclick, display 'X'
+				square.innerHTML = player;
+
+				//get last char of element's id
+				var i = square.id.charAt(square.id.length-1);
+				board[i] = player;
+
+				//changing the player
+				//create condition where if player = 'X', switch to display 'O' if not display 'X'
+				player = (player == 'X') ? 'O':'X';
+				evalBoard();
+			}
+		}
+
+		function evalBoard(){
+			if (board[0] != '' && board[0] == board[1] && board[0] == board[2]) {
+				console.log('WINNER ' + board[0]);
+			}else if(board[3] != '' && board[3] == board[4] && board[3] == board[5]) {
+				console.log('WINNER ' + board[3]);
+			}else if(board[6] != '' && board[6] == board[7] && board[6] == board[8]) {
+				console.log('WINNER ' + board[6]);
+			}
+		}
+	</script>
+	</body>
+</html>
