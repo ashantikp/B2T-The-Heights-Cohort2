@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+
+		<script type="text/javascript">
+			var color = ['Blue', 'Green', 'Red', 'Orange', 'Violet', 'Indigo', 'Yellow'];
+			var o = ['th', 'st', 'nd', 'rd'];
+
+			//order of the "color" array using "o" array
+
+			for(var i = 0; i <= color.length - 1; i++){
+				//create condition for certain indecies of "o" to display. If greater than index 3, display index 0. Otherwise display index of counter
+				if(i >= 3){
+				console.log(i + 1 + o[0] + " choice is " + color[i])
+				}else{
+					console.log(i + 1 + o[i + 1] + " choice is " + color[i])
+				}
+			}
+
+		</script>
+	</body>
+</html>

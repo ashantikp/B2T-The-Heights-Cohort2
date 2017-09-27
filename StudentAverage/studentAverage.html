@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+
+		<script type="text/javascript">
+			//create array for grades 
+			var grade = [80, 77, 88, 95, 68];
+
+			//find average
+			var sum = 80 + 77 + 88 + 95 + 68;
+			var avg = sum / grade.length;
+
+			console.log(avg);
+
+			//determine letter grade of average using if statement
+			if(avg >= 90 && avg <=100){
+				console.log('A')
+			}else if(avg >= 80 && avg <= 89){
+				console.log('B')
+			}else if(avg >=71 && avg <=79){
+				console.log('C')
+			}else if(avg >=61 && avg <=70){
+				console.log('D')
+			}else{
+				console.log('F')
+			}
+		</script>
+	</body>
+</html>

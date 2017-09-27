@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<h1 id="day"></h1>
+
+		<script type="text/javascript">
+			//Get today's day. Use new Date().getDay 
+			//use switch statement to assign values to cases 0-6
+			//using innerHTML through the DOM, display a message for the current day
+			switch(new Date().getDay()){
+				case 0: 
+					document.getElementById('day').innerHTML ='Happy Sunday!';
+					break;
+				case 1: 
+					document.getElementById('day').innerHTML ='Happy Monday!';
+					break;
+				case 2: 
+					document.getElementById('day').innerHTML ='Happy Tuesday!';
+					break;
+				case 3: 
+					document.getElementById('day').innerHTML ='Happy Wednesday!';
+					break;
+				case 4: 
+					document.getElementById('day').innerHTML ='Happy Thursday!';
+					break;
+				case 5: 
+					document.getElementById('day').innerHTML ='Happy Friday!';
+					break;
+				case 6: 
+					document.getElementById('day').innerHTML ='Happy Saturday!';
+					break;
+			}
+
+
+		</script>
+	</body>
+</html>
