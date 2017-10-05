@@ -1,148 +1,65 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title></title>
-		<style type="text/css">
-			body{
-				font-family: helvetica, sans-serif;
-			}
-			table{
-				border-collapse: collapse;
-				width: 50%;
-			}
-
-			table, th, td{
-				text-align: center;
-			}
-
-			th, td{
-				height: 20px;
-				padding: 10px;
-				border-bottom: 1px solid grey;
-			}
-
-		</style>
+		<title>The Queue</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
 	</head>
 	<body>
-		<h1>Welcome to the Deli!</h1>
 
-		Customer's Name:<input type="text" id="custName"><br>
-		Customer's Order:<input type="text" id="custOrder"><br>
+		<header id="header">
+			<nav>
+				<p class="sansserif">&#8801; menu</p>
+				<ul></ul>
+			</nav><br>
 
-		<input type="button" value="Add Customer" onclick="addCustomer()"><br>
-		<input type="button" value="Customer Served" onclick="custServed()"><br><br>
-
-		<h2 id="message"></h2>
-
-		<table id="queueTable">
-			<tr>
-				<th width="50px">Pos.</th>
-				<th>Name</th>
-				<th>Order</th>
-			</tr>
-		</table>
-
-
-
-
-
-		<script type="text/javascript">
+			<div id="tagLine">
+				<img src="images/queueLogo.svg"><br><br>
+				<h2><a href="#placeOrder" class="hvr-grow">(join the line...)</a></h2>
+			</div>
+		</header>
 		
-			// html steps
-				//create empty table 
-					//needs 3 columns: position, name, and order
-				//create input for 'Customer's Name' 
-				//create input for 'Customer Order'
-			
-
-			//js steps
-			 	// create empty array of objects for the queue
-					// array will hold name and order from inputs
-				// build function that puts a 'string' that contains the order and a string containing the name in the array
-				// build function that displays everyone’s current place in line on an HTML table
-				// default or else should say "The line is currently empty.".
-				// Build a function which should call out (i.e. display on the webpage) the next person in line and then remove them from the front
-				// If there is nobody in line, it should call out (display on the webpage) that "There is nobody waiting to be served!
-
+		<!-- create inputs for Customer's Name and Order -->
+		<section id="placeOrder">
+			<div class="orderBox">
+				<br><h1>PLACE AN ORDER</h1><br><br>
 				
-
-				
-				//global variables
-				var queue = []
-				
-				// create function to push values to the array
-				function addCustomer(){
-
-					var newRow = document.createElement("tr");
-
-					var cell1 = document.createElement("td");
-					var cell2 = document.createElement("td");
-					var cell3 = document.createElement("td");
+				<form>
+					<label for="custName">Name:</label>
+					<input type="text" id="custName" placeholder="Name"><br><br><br>
 					
-					// assign input values from customer to variables
-					var custName = document.getElementById("custName").value;
-					var custOrder = document.getElementById("custOrder").value;
+					<label for="custOrder">Order:</label>
+					<input type="text" id="custOrder" placeholder="Order"><br><br><br>
+				</form>
+				<input type="button" value="Add Order" onclick="addOrder()"><br><br>
+			</div>
+		</section>
+		<!-- create a message to indicate who was served -->
+		<br><h2 id="message"></h2>
+		<!-- create empty table with 3 <th> elements: position, name, and order -->
+		<section id="table">
+			<table id="queueTable">
+				<tr>
+					<th width="50px">No.</th>
+					<th>Name</th>
+					<th>Order</th>
+				</tr>
+			</table>
+		</section>
+		
+		<!-- create 2 buttons to add and remove customers to/from queue -->
+			<div class="buttons">
+				<input type="button" value="Customer Served" onclick="custServed()"><br><br>
+			</div>
+		<h2 id="emptyQueue"></h2>
 
-					//push values into array
-					queue.push({
-					"name": custName, 
-					"order": custOrder
-					});
-					
-					// create new <tr> element
-					document.getElementById("queueTable").appendChild(newRow)
+		<footer>
 
-					// create <td> elements with input data
-					// display customer current position
-					
+			<p class="sansserif"><a href="#header"> back to top &#9650;</a></p>
+		</footer>
 
-					
-						document.getElementById("queueTable").appendChild(cell1).innerHTML = queue.length
+		
 
-					document.getElementById("queueTable").appendChild(cell2).innerHTML = custName;
-
-					document.getElementById("queueTable").appendChild(cell3).innerHTML = custOrder;
-
-					// clears display message above table
-					document.getElementById("message").innerHTML = ""
-					
-					console.log("row remove");
-
-					// clear input text box
-				}
-
-				// create customer served function
-				function custServed(){
-
-
-					// remove object from front of the array 
-					queue.shift();
-
-					//remove customer from queue
-					document.getElementById("queueTable").deleteRow(-1);
-					
-					// Code below doesnt work
-					/*
-					document.getElementById("table").removeChild(newRow);
-					document.getElementById("table").removeChild(cell1);
-					document.getElementById("table").removeChild(cell2);
-					document.getElementById("table").removeChild(cell3);
-					*/
-			
-
-					//create condition if queue is empty
-					if(queue.length == 0){
-						document.getElementById("message").innerHTML = "There is no one waiting to be served."
-					}else{
-						document.getElementById("message").innerHTML = "Next to be served is, " + queue[0].name;
-					}
-
-					console.log(queue);
-				}
-
-
-					
-		</script>
+		<script src="script.js"></script>
 				
 	</body>
 </html>
