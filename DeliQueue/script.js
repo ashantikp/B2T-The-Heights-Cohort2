@@ -45,17 +45,24 @@
 
 				//remove customer from queue
 				table.deleteRow(1);
-	
+
+
 				//display who was served in the DOM. Final message not displaying 
-				if(queue.length !== 0){
-					document.getElementById("message").innerHTML = queue[0].name + " was served " + queue[0].order;
+				if(queue.length > 1){
+					document.getElementById("message").innerHTML = queue[0].name + " was served " + queue[0].order;	
+					// remove object from front of the array
+					queue.shift();
+					
 
 				}else{
-					document.getElementById("emptyQueue").innerHTML = "There is no one waiting to be served.";
+					document.getElementById("message").innerHTML = "";
+					document.getElementById("message").innerHTML = queue[0].name + " was served " + queue[0].order;	
+
+					document.getElementById("emptyQueue").innerHTML = "There is no one waiting in line.";
 				}
 
-				// remove object from front of the array 
-				queue.shift();
+				
+	
 
 				// display new customer position 
 				var rows = document.getElementsByTagName("tr");

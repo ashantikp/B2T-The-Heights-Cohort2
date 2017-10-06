@@ -7,14 +7,17 @@
 	<body>
 
 		<header id="header">
+			
 			<nav>
+				
 				<p class="sansserif">&#8801; menu</p>
 				<ul></ul>
 			</nav><br>
 
 			<div id="tagLine">
-				<img src="images/queueLogo.svg"><br><br>
-				<h2><a href="#placeOrder" class="hvr-grow">(join the line...)</a></h2>
+				<a href= #placeOrder>
+				<img src="images/queueLogoTag.svg" class="logo" class="hvr-grow"></a><br><br>
+				
 			</div>
 		</header>
 		
@@ -34,9 +37,10 @@
 			</div>
 		</section>
 		<!-- create a message to indicate who was served -->
-		<br><h2 id="message"></h2>
+		
 		<!-- create empty table with 3 <th> elements: position, name, and order -->
 		<section id="table">
+			<br><h2 id="message"></h2>
 			<table id="queueTable">
 				<tr>
 					<th width="50px">No.</th>
@@ -44,12 +48,13 @@
 					<th>Order</th>
 				</tr>
 			</table>
-		</section>
-		
-		<!-- create 2 buttons to add and remove customers to/from queue -->
 			<div class="buttons">
 				<input type="button" value="Customer Served" onclick="custServed()"><br><br>
 			</div>
+		</section>
+		
+		<!-- create 2 buttons to add and remove customers to/from queue -->
+			
 		<h2 id="emptyQueue"></h2>
 
 		<footer>

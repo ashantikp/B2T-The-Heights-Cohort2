@@ -4,7 +4,7 @@
 		<title></title>
 	</head>
 	<body>
-
+		<h1 id="readingStatus"></h1>
 
 		<script type="text/javascript">
 			var library = [
@@ -13,9 +13,18 @@
 				{ author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', readingStatus: false }
 			];
 
+			var h1 = document.getElementById('readingStatus')
+
 			for(var i in library){
-				console.log(library.author)
-			}
+				console.log(library[i]);
+				if(library.readingStatus = true){
+				h1.innerHTML = "Already read " + library.title + " by " + library.author
+				}else{
+					h1.innerHTML = "You still need to read " + library.title + " by " + library.author
+				};
+			};
+
+
 		</script>
 	</body>
 </html>
