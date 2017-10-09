@@ -1,69 +1,77 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>The Queue</title>
+		<title>The Queue: Deli</title>
 		<link rel="stylesheet" type="text/css" href="styles.css">
 	</head>
 	<body>
-
-		<header id="header">
-			
-			<nav>
+		<section class="content">
+			<!-- Header/nav menu -->
+			<header id="header">
 				
-				<p class="sansserif">&#8801; menu</p>
-				<ul></ul>
-			</nav><br>
+				<nav>
+					<p class="sansserif">&#8801; menu</p>
+					<ul></ul>
+				</nav><br>
 
-			<div id="tagLine">
-				<a href= #placeOrder>
-				<img src="images/queueLogoTag.svg" class="logo" class="hvr-grow"></a><br><br>
-				
-			</div>
-		</header>
+				<div id="tagLine">
+					<a href= #placeOrder>
+					<img src="images/queueLogo.svg" class="logo"></a><br>
+					<h2 class="hvr-grow"><a href="#placeOrder">(join the line...)</a></h2>
+					<br>		
+				</div>
+			</header>
 		
-		<!-- create inputs for Customer's Name and Order -->
-		<section id="placeOrder">
-			<div class="orderBox">
-				<br><h1>PLACE AN ORDER</h1><br><br>
-				
-				<form>
-					<label for="custName">Name:</label>
-					<input type="text" id="custName" placeholder="Name"><br><br><br>
+			<!-- create inputs for Customer's Name and Order -->
+			<section id="placeOrder">
+				<br><br><br><p>Welcome to <em>The Queue</em>, our newest deli counter! <br>Place an order <a href="#custName">below</a> to join the line. <br>
+
+				<div class="orderBox">
+					<br><h1>PLACE AN ORDER</h1><br><br>
 					
-					<label for="custOrder">Order:</label>
-					<input type="text" id="custOrder" placeholder="Order"><br><br><br>
-				</form>
-				<input type="button" value="Add Order" onclick="addOrder()"><br><br>
-			</div>
-			<br><h2 id="message"></h2>
-		</section>
-		<!-- create a message to indicate who was served -->
-		
-		<!-- create empty table with 3 <th> elements: position, name, and order -->
-		<section id="table">
+					<form>
+						<label for="custName">Name:</label>
+						<input type="text" id="custName" placeholder="Name"><br><br><br>
+						
+						<label for="custOrder">Order:</label>
+						<input type="text" id="custOrder" placeholder="Order"><br><br><br>
+					</form>
+
+					<!-- button to add customers to queue -->
+					<input type="button" value="Add Order" onclick="addOrder()"><br><br>
+				</div>
+
+				<!-- create a message to indicate who was served -->
+				<h2 id="message"></h2>
+			</section>
 			
-			<table id="queueTable">
-				<tr>
-					<th width="50px">No.</th>
-					<th>Name</th>
-					<th>Order</th>
-				</tr>
-			</table>
-			<div class="buttons">
-				<input type="button" value="Customer Served" onclick="custServed()"><br><br>
-			</div>
-		</section>
-		
-		<!-- create 2 buttons to add and remove customers to/from queue -->
 			
-		<h2 id="emptyQueue"></h2>
+			<!-- create empty table with 3 <th> elements: position, name, and order -->
+			<section id="table">
+				
+				<table id="queueTable">
+					<tr>
+						<th width="50px">No.</th>
+						<th>Name</th>
+						<th>Order</th>
+					</tr>
+				</table>
 
-		<hr><footer>
-
-			<p class="sansserif"><a href="#header"> back to top &#9650;</a></p>
-		</footer>
-
-		
+				<!-- create empty queue message -->
+				<h2 id="emptyQueue"></h2><br>
+				
+				<!-- button to remove customers from queue -->
+				<div class="buttons">
+					<input type="button" value="Customer Served" onclick="custServed()">
+				</div>
+			</section><br><br><br>
+			
+			<!-- footer -->
+			<footer>
+				<hr>
+				<br><p class="sansserif"><a href="#header"> back to top &#9650;</a></p><br>
+			</footer>
+		</section>
 
 		<script src="script.js"></script>
 				

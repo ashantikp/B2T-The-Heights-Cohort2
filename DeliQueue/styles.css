@@ -1,8 +1,8 @@
 /* text styles */
 body{
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
-	background-color: #1b1b1c;
-	letter-spacing: 3px;	
+	background-color: #f5f3f1;
+	letter-spacing: 2px;	
 }
 h1{
 	color: #f6f6f6;
@@ -26,36 +26,43 @@ h3{
 }
 a{
 	text-decoration: none;
-	color: inherit;
+	color: #789618;
 	
 }
-
-/* button transition */
-.hvr-grow {
-    display: inline-block;
-    vertical-align: middle;
-    transform: translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    backface-visibility: hidden;
-    -moz-osx-font-smoothing: grayscale;
-    transition-duration: 0.3s;
-    transition-property: transform;
+p{
+	color: white;
+	font-size: 16pt;
+	text-align: center;
+	text-transform: uppercase;
 }
 
-.hvr-grow:hover,
-.hvr-grow:focus,
-.hvr-grow:active {
-    transform: scale(1.1);
+.buttons{
+	position: relative;
+	top: 0; 
+   	bottom: 0; 
+  	left: -20%;
+  	right: 0;
 }
 
+.content{
+	background-color: #232323;
+	position: static;
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+.sansserif{
+	text-transform: none;
+}
 /* header section */
 header{
 	width: 100%;
 	height: 350px;
 	padding: 10px;
 	margin-right: -10px;
+	margin-left: -10px;
 	line-height: 20px;
-	position: static;
+	
 	background-image: url(images/egg-1999274_1920.jpg);
 
 
@@ -63,6 +70,11 @@ header{
 header h2{
 	color: #5b6f1a;
 	font-size: 35pt;
+	position: relative;
+	top: 0;
+	right:0;
+	bottom: 0;
+	left: 35%;
 }
 header img.logo{
 	max-width: 80%;
@@ -70,7 +82,7 @@ header img.logo{
 	top: 10%;
 	right:0;
 	bottom: 0;
-	left: 30%;
+	left: 25%;
 }
 
 nav p{
@@ -90,10 +102,29 @@ nav ul{
     width: 200px;
     float:right;
 }
-nav img{
+/*nav img{
 	background-position: center;
 	width: 100%;
 	background-image: cover;
+}*/
+
+/* tagline transition */
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 /* section #placeOrder */
@@ -101,7 +132,7 @@ label{
 	color: black;
 }
 
-#placeOrder{
+#placeOrder{ 
 	position: static;
 	width: 100%
 
@@ -136,7 +167,7 @@ form #custOrder{
 	height: 50px;
 }
 
-/* order buttons */
+/* order button */
 input[type=button]{
 	color: #fff;
   	background-color: #5b6f1a;
@@ -155,18 +186,9 @@ input[type=button]{
 	cursor: pointer;
 }
 
-.buttons{
-	position: relative;
-	top: 0; 
-   	bottom: 0; 
-  	left: -20%;
-  	right: 0;
-}
-
 input::placeholder{
 	font-size: 10pt;
 }
-
 
 /* section #table */
 #table{
@@ -177,7 +199,7 @@ table{
 	width: 75%;
 	font-size: 16pt;
 	color: #f6f6f6;
-	margin-top: 10%;
+	margin-top: 15%;
 	margin-left: 10%;
 	margin-bottom: 10%;
 }
