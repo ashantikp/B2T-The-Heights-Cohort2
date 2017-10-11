@@ -4,27 +4,38 @@
 		<title></title>
 	</head>
 	<body>
-		<h1 id="readingStatus"></h1>
+		<h1>My Library</h1>
 
 		<script type="text/javascript">
+			
+			// library is an array of objects
 			var library = [
 				{ author: 'Bill Gates', title: 'The Road Ahead', readingStatus: true }, 
 				{ author: 'Steve Jobs', title: 'Walter Issacson', readingStatus: true }, 
 				{ author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', readingStatus: false }
 			];
 
-			var h1 = document.getElementById('readingStatus')
-
+			//loop through the objects in the array using for/in loop
 			for(var i in library){
-				console.log(i);
-			}
-				/*if(library.readingStatus = true){
-				h1.innerHTML = "Already read " + library.title + " by " + library.author
-				}else{
-					h1.innerHTML = "You still need to read " + library.title + " by " + library.author
-				};
-			};*/
 
+				if (library[i].readingStatus == false) {
+					//creates h1 element to display reading status in the DOM
+					var para = document.createElement("P");
+					var text = document.createTextNode("You still need to read " + library[i].title + " by " + library[i].author);
+					//append nodes
+					para.appendChild(text);
+					document.body.appendChild(para)
+					
+				} else {
+					//creates h1 element to display reading status in the DOM
+					var para = document.createElement("P");
+					var text = document.createTextNode("Already read " + library[i].title + " by " + library[i].author);
+					//append nodes 
+					para.appendChild(text);
+					document.body.appendChild(para)
+				}
+			};
+			
 
 		</script>
 	</body>

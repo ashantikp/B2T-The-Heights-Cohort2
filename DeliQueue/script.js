@@ -1,9 +1,9 @@
 	//global variable: create empty array
 			var queue = []
 			
+			
 			// create function to push values to the array
 			function addOrder(){
-				
 				var newRow = document.createElement("TR");
 
 				// create child nodes for newRow;
@@ -65,7 +65,7 @@
 
 				// display message if queue is empty
 				if(rows.length == 1){
-					//document.getElementById("message").innerHTML = "";
+					document.getElementById("message").innerHTML = "";
 					document.getElementById("emptyQueue").innerHTML = "There is no one waiting in line";
 				}; 
 			};
