@@ -1,11 +1,21 @@
-/* text styles */
+/* color codes
+#5b6f1a - green
+#789618 - bright green
+#f5f3f1 - off white
+#4a4c48 - dark grey
+ */
+@media screen and (max-width:480px){
+	
+}
+
 body{
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	background-color: white;
 	letter-spacing: 2px;
+	color: #4a4c48;
 }
 h1{
-	color: #f6f6f6;
+	color: #f5f3f1;
 	text-shadow: black;
 	font-size: 30pt;
 	letter-spacing: 2px;
@@ -28,8 +38,8 @@ a{
 	
 }
 p{
-	color: black;
-	font-size: 16pt;
+	
+	font-size: 18pt;
 	text-align: center;
 	text-transform: uppercase;
 }
@@ -71,13 +81,13 @@ header h2{
 	top: 0;
 	right:0;
 	bottom: 0;
-	left: 35%;
+	left: 30%;
 }
 header img.logo{
 	max-width: 80%;
 	position: relative;
 	top: 10%;
-	right:0;
+	right: 0;
 	bottom: 0;
 	left: 25%;
 }
@@ -99,11 +109,6 @@ nav ul{
     width: 200px;
     float:right;
 }
-/*nav img{
-	background-position: center;
-	width: 100%;
-	background-image: cover;
-}*/
 
 /* tagline transition */
 .hvr-grow {
@@ -145,7 +150,8 @@ label{
 	width: 500px;
 	height: 450px;
 	background-color: rgba(166, 137, 97, 0.5);
-	border: 2px solid white;
+	border: 5px solid white;
+	box-shadow: 10px 10px 5px #888888;
 
 }
 form{
@@ -195,7 +201,6 @@ table{
 	border-collapse: collapse;	 
 	width: 75%;
 	font-size: 16pt;
-	/*color: #f6f6f6;*/
 	margin-top: 15%;
 	margin-left: 5%;
 	margin-bottom: 10%;
